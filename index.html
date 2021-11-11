@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <style>
+        #gittalk_comments {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="gittalk_comments"></div>
+    <script>
+    var gitalk = new Gitalk({
+        clientID: '09839b8697b2e76431b1', //clientID 
+        clientSecret: 'ec72b7b483c7fa5181ababf59b2111ea21fcca3e', //clientSecret
+        repo: 'gittalk_comments', // 评论仓库名
+        owner: 'Kokonose',
+        admin: ['Kokonose'], //管理人
+        id: location.pathname, // 返回当前 URL 的路径部分作为id
+        language:'zh-CN', //语言
+        distractionFreeMode: false  // 无干扰模式
+    })
+    gitalk.render('gittalk_comments')
+    </script>
+</body>
+</html>
